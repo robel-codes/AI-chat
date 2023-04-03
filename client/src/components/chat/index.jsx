@@ -8,6 +8,7 @@ import Header from "@/components/CustomHeader";
 import StandardMessageForm from "@/components/CustomMessageForm/StandardMessageForm";
 import Ai from "@/components/CustomMessageForm/Ai";
 import AiCode from "@/components/CustomMessageForm/AiCode";
+import CompletionAssist from "@/components/CustomMessageForm/CompletionAssist";
 
 const Chat = () => {
   const chatProps = useMultiChatLogic(
@@ -29,6 +30,11 @@ const Chat = () => {
           }
           if (chatProps.chat?.title.startsWith("AiCode_")) {
             return <AiCode props={props} activeChat={chatProps.chat} />;
+          }
+          if (chatProps.chat?.title.startsWith("CompletionAssist_")) {
+            return (
+              <CompletionAssist props={props} activeChat={chatProps.chat} />
+            );
           }
 
           return (

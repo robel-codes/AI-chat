@@ -18,8 +18,19 @@ export const api = createApi({
         method: "POST",
         body: payload
       })
+    }),
+    postCompletionAssist: build.mutation({
+      query: (payload) => ({
+        url: "openai/completion",
+        method: "POST",
+        body: payload
+      })
     })
   })
 });
 
-export const { usePostAiTextMutation, usePostAiCodeMutation } = api;
+export const {
+  usePostAiTextMutation,
+  usePostAiCodeMutation,
+  usePostCompletionAssistMutation
+} = api;
