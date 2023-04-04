@@ -1,0 +1,26 @@
+{
+  "name": "ai-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "develop": "concurrently \"cd server && npm run dev\" \"cd client && npm start\"",
+    "install": "cd server && npm i --legacy-peer-deps && cd ../client && npm i --legacy-peer-deps",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robel-codes/AI-chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robel-codes/AI-chat/issues"
+  },
+  "homepage": "https://github.com/robel-codes/AI-chat#readme",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
