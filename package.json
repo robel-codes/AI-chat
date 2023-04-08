@@ -7,7 +7,7 @@
     "start": "concurrently \"cd client && npm run build\" \"cd client && npm run dev\"",
     "develop": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
     "install": "cd server && npm i --legacy-peer-deps && cd ../client && npm i --legacy-peer-deps",
-    "build": "cd client && npm run build"
+    "build": "concurrently \"cd client && npm run build\" \"cd client && npm run dev\""
   },
   "repository": {
     "type": "git",
