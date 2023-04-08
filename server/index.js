@@ -30,7 +30,9 @@ app.use("/openai", openAiRoutes);
 app.use("/auth", authRoutes);
 
 // if we're in production, serve client/build as static assets
-app.use(express.static(path.join(__dirname, "../client/dist")));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/dist")));
+}
 
 // Server Setup
 const PORT = process.env.PORT || 9000;
