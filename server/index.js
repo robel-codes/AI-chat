@@ -7,6 +7,7 @@ import morgan from "morgan";
 import { Configuration, OpenAIApi } from "openai";
 import openAiRoutes from "./routes/openai.js";
 import authRoutes from "./routes/auth.js";
+const path = require("path");
 
 // Configurations
 dotenv.config();
@@ -27,6 +28,9 @@ export const openai = new OpenAIApi(configuration);
 // Routes
 app.use("/openai", openAiRoutes);
 app.use("/auth", authRoutes);
+
+// if we're in production, serve client/build as static assets
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 // Server Setup
 const PORT = process.env.PORT || 9000;
