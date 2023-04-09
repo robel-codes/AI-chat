@@ -17,7 +17,7 @@ ChatEngine is a powerful chat platform that can be used to create a variety of c
 
 ### Screenshot of Application
 
-## ![Application Screenshot](https://raw.githubusercontent.com/robel-codes/AI-chat/main/Images/demo.gif)
+## ![Application Screenshot](https://raw.githubusercontent.com/robel-codes/AI-chat/main/images/demo.gif)
 
 ## Installation
 
